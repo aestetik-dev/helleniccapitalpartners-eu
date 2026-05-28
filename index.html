@@ -1,206 +1,268 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HELLENIC CAPITAL PARTNERS A.E.</title>
 <link href="./files/css" rel="stylesheet" type="text/css">
-<style type="text/css">
-body {
-	background-color: #03225b;
-	background-repeat: repeat;
-	margin-left: 0px;
-	margin-top: 50px;
-	margin-right: 0px;
-	margin-bottom: 50px;
-	font-family: 'Open Sans', sans-serif;
+<style>
+:root {
+	--ink: #182033;
+	--muted: #5f6d80;
+	--paper: #ffffff;
+	--line: #d9e2ec;
+	--section: #f7fafc;
+	--accent: #005092;
+	--accent-dark: #003d73;
+	--page: #eef3f7;
 }
 
-article {
-	width:960px;
-	background-color:#fff;
-	padding-top:50px;
-	padding-bottom:50px;
-	margin:auto;
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	color: var(--ink);
+	background:
+		linear-gradient(135deg, rgba(0, 80, 146, 0.96), rgba(3, 34, 91, 0.96)),
+		var(--page);
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.page {
+	width: min(1080px, calc(100% - 32px));
+	margin: 0 auto;
+	padding: 40px 0 56px;
+}
+
+.intro {
+	margin-bottom: 24px;
+	color: #ffffff;
+}
+
+.intro p {
+	margin: 8px 0 0;
+	max-width: 680px;
+	color: rgba(255, 255, 255, 0.78);
 }
 
 h1 {
-	font-size:18px;
-	margin-bottom:20px;
+	margin: 0;
+	font-size: 34px;
+	line-height: 1.15;
 }
 
-.title {
-	font-size:40px;
-	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:bold;
-	color:#000;
+.company {
+	margin-top: 24px;
+	background: var(--paper);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 20px 45px rgba(0, 21, 55, 0.22);
 }
 
-.subtitle {
-	font-size:26px;
-	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:bold;
-	color:#333;
+.company-header {
+	padding: 30px;
+	border-top: 5px solid var(--accent);
 }
 
-.info {
-	font-size:16px;
-	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:normal;
-	margin-top:30px;
-	color:#333;
+.company-header h2 {
+	margin: 0;
+	font-size: 28px;
+	line-height: 1.15;
 }
 
-.isologismos {
-	font-size:14px;
-	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:normal;
-	margin-top:30px;
-	line-height:20px;
+.company-header .subtitle {
+	margin: 8px 0 0;
+	color: var(--accent-dark);
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 }
 
-.line {
-	width:600px;
-	margin-left:auto;
-	margin-right:auto;
-	border-bottom:thin;
-	border-bottom-style:solid;
-	border-bottom-color:#999;
-	margin-top:30px;
-	margin-bottom:30px;
+.details {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 24px;
+	margin-top: 22px;
+	padding-top: 20px;
+	border-top: 1px solid var(--line);
+	color: var(--muted);
 }
 
-.link {
-	font-size:16px;
-	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:normal;
+.details p {
+	margin: 0;
 }
 
-a {
-	color:#005092;
-	font-style:normal;
-	text-decoration:none;
+.documents {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	border-top: 1px solid var(--line);
 }
 
-.tr-shell {
-	text-align:center;
-	line-height:20px;
+.document {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-height: 104px;
+	padding: 20px;
+	color: var(--ink);
+	text-decoration: none;
+	border-right: 1px solid var(--line);
+	background: #ffffff;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.document:last-child {
+	border-right: 0;
+}
+
+.document:hover,
+.document:focus {
+	background: #eef6ff;
+	color: var(--accent-dark);
+	outline: none;
+}
+
+.document img {
+	width: 32px;
+	height: 34px;
+	flex: 0 0 auto;
+}
+
+.document strong {
+	display: block;
+	color: var(--ink);
+	font-size: 15px;
+}
+
+.document span {
+	display: block;
+	margin-top: 2px;
+	color: var(--muted);
+	font-size: 14px;
 }
 
 .footer {
-	width:100%;
-	text-align:center;
-	margin-top:80px;
-	font-size:14px;
+	margin-top: 28px;
+	color: rgba(255, 255, 255, 0.76);
+	font-size: 13px;
+	text-align: center;
 }
 
-hr {
-	background-color: #CCC;
-	height:1px;
-	width:90%;
-	box-shadow:none;
-	margin-top:70px;
-	margin-bottom:50px;
-	border:none;
+@media (max-width: 860px) {
+	.documents {
+		grid-template-columns: 1fr;
+	}
+
+	.document {
+		border-right: 0;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.document:last-child {
+		border-bottom: 0;
+	}
 }
 
+@media (max-width: 640px) {
+	.page {
+		width: min(100% - 20px, 1080px);
+		padding: 24px 0 36px;
+	}
+
+	h1 {
+		font-size: 28px;
+	}
+
+	.company-header {
+		padding: 24px;
+	}
+
+	.company-header h2 {
+		font-size: 24px;
+	}
+
+	.details {
+		grid-template-columns: 1fr;
+	}
+}
 </style>
 </head>
+<body>
+<main class="page">
+	<header class="intro">
+		<h1>HELLENIC CAPITAL PARTNERS</h1>
+		<p>Εταιρικές οικονομικές δημοσιεύσεις και προσκλήσεις γενικών συνελεύσεων.</p>
+	</header>
 
-<body >
+	<section class="company">
+		<header class="company-header">
+			<h2>HELLENIC CAPITAL PARTNERS A.E.</h2>
+			<p class="subtitle">Εταιρεία Συμμετοχών</p>
+			<div class="details">
+				<p>ΛΕΩΦ. ΒΑΣ. ΣΟΦΙΑΣ &amp; ΣΟΥΤΣΟΥ 1 - ΑΘΗΝΑ 115 21</p>
+				<p>ΑΦΜ: 800680691</p>
+				<p>ΔΟΥ: ΦΑΕ ΑΘΗΝΩΝ</p>
+				<p>ΓΕΜΗ: 135811801000</p>
+				<p>ΤΗΛ: 2108171953</p>
+				<p>ΦΑΞ: 2108171969</p>
+			</div>
+		</header>
 
-<article>
+		<div class="documents">
+			<a class="document" href="./files/isologismos-2015-a.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Ισολογισμός 2015</strong><span>Προβολή PDF</span></span>
+			</a>
+			<a class="document" href="./files/katastaseis-2015-a.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Οικονομικές Καταστάσεις 2015</strong><span>Ετήσιες οικονομικές καταστάσεις</span></span>
+			</a>
+			<a class="document" href="./files/proskliseis-2017-a.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Γενική Συνέλευση 2017</strong><span>Πρόσκληση μετόχων</span></span>
+			</a>
+		</div>
+	</section>
 
-<div class="title">HELLENIC CAPITAL PARTNERS A.E.</div>
-<div class="subtitle">ΕΤΑΙΡΕΙΑ ΣΥΜΜΕΤΟΧΩΝ</div>
-<div class="info">
+	<section class="company">
+		<header class="company-header">
+			<h2>HELLENIC CAPITAL PARTNERS A.E.Δ.Α.Κ.Ε.Σ.</h2>
+			<p class="subtitle">Διαχείριση Αμοιβαίων Κεφαλαίων</p>
+			<div class="details">
+				<p>Λ. ΚΗΦΙΣΙΑΣ 10 - ΜΑΡΟΥΣΙ 151 25</p>
+				<p>ΑΦΜ: 999984680</p>
+				<p>ΔΟΥ: ΦΑΕ ΑΘΗΝΩΝ</p>
+				<p>ΑΡΜΑΕ: 49621/01ΑΤ/Β/01/241 (04)</p>
+				<p>ΓΕΜΗ: 4373001000</p>
+				<p>ΤΗΛ: 2108171953</p>
+				<p>ΦΑΞ: 2108171969</p>
+			</div>
+		</header>
 
-ΛΕΩΦ. ΒΑΣ. ΣΟΦΙΑΣ &amp; ΣΟΥΤΣΟΥ 1 - ΑΘΗΝΑ 115 21  /
-ΑΦΜ: 800680691 /
-ΔΟΥ: ΦΑΕ ΑΘΗΝΩΝ /
-ΓΕΜΗ: 135811801000 /
-ΤΗΛ: 2108171953 /
-ΦΑΞ: 2108171969
+		<div class="documents">
+			<a class="document" href="./files/isologismos-2015-b.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Ισολογισμός 2015</strong><span>Προβολή PDF</span></span>
+			</a>
+			<a class="document" href="./files/katastaseis-2015-b.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Οικονομικές Καταστάσεις 2015</strong><span>Ετήσιες οικονομικές καταστάσεις</span></span>
+			</a>
+			<a class="document" href="./files/proskliseis-2018-b.pdf" target="_blank" rel="noopener">
+				<img src="./files/Adobe_PDF_Icon.svg.png" alt="">
+				<span><strong>Γενική Συνέλευση 2018</strong><span>Πρόσκληση μετόχων</span></span>
+			</a>
+		</div>
+	</section>
 
-</div>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="margin-left:5%; float:left; margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΙΣΟΛΟΓΙΣΜΟΙ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/isologismos-2015-a.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΠΡΟΒΟΛΗ ΙΣΟΛΟΓΙΣΜΟΥ 2015 »</a></td>
-  </tr>
-</tbody></table>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="float:left; margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΤΑΣΤΑΣΕΙΣ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/katastaseis-2015-a.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΕΤΗΣΙΕΣ ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΤΑΣΤΑΣΕΙΣ ΤΗΣ ΧΡΗΣΗΣ 2015 »</a></td>
-  </tr>
-</tbody></table>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΠΡΟΣΚΛΗΣΕΙΣ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/proskliseis-2017-a.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΠΡΟΣΚΛΗΣΗ ΤΑΚΤΙΚΗΣ ΓΕΝΙΚΗΣ ΣΥΝΕΛΕΥΣΗΣ ΤΩΝ ΜΕΤΟΧΩΝ 2017 »</a></td>
-  </tr>
-</tbody></table>
-<hr>
-<div class="title">HELLENIC CAPITAL PARTNERS A.E.Δ.Α.Κ.Ε.Σ.</div>
-<div class="subtitle">ΔΙΑΧΕΙΡΙΣΗ ΑΜΟΙΒΑΙΩΝ ΚΕΦΑΛΑΙΩΝ</div>
-<div class="info">
-
-Λ. ΚΗΦΙΣΙΑΣ 10 - ΜΑΡΟΥΣΙ 151 25 /
-ΑΦΜ: 999984680 /
-ΔΟΥ: ΦΑΕ ΑΘΗΝΩΝ /
-ΑΡΜΑΕ: 49621/01ΑΤ/Β/01/241 (04) /
-ΓΕΜΗ: 4373001000 /
-ΤΗΛ: 2108171953 /
-ΦΑΞ: 2108171969
-
-</div>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="margin-left:5%; float:left; margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΙΣΟΛΟΓΙΣΜΟΙ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/isologismos-2015-b.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΠΡΟΒΟΛΗ ΙΣΟΛΟΓΙΣΜΟΥ 2015 »</a></td>
-  </tr>
-</tbody></table>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="float:left; margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΤΑΣΤΑΣΕΙΣ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/katastaseis-2015-b.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΕΤΗΣΙΕΣ ΟΙΚΟΝΟΜΙΚΕΣ ΚΑΤΑΣΤΑΣΕΙΣ ΤΗΣ ΧΡΗΣΗΣ 2015 »</a></td>
-  </tr>
-</tbody></table>
-
-<table width="30%" border="0" cellspacing="0" cellpadding="0" style="margin-top:40px;">
-  <tbody><tr class="tr-shell">
-    <td><h1>ΠΡΟΣΚΛΗΣΕΙΣ</h1></td>
-  </tr>
-  <tr class="tr-shell">
-    <td><a href="./files/proskliseis-2018-b.pdf" target="_blank"><img src="./files/Adobe_PDF_Icon.svg.png"><br>
-		ΠΡΟΣΚΛΗΣΗ ΤΑΚΤΙΚΗΣ ΓΕΝΙΚΗΣ ΣΥΝΕΛΕΥΣΗΣ ΤΩΝ ΜΕΤΟΧΩΝ 2018 »</a></td>
-  </tr>
-</tbody></table>
-<div class="footer">© Copyright 2016 HELLENIC CAPITAL PARTNERS A.E., HELLENIC CAPITAL PARTNERS A.E.Δ.Α.Κ.Ε.Σ.</div>
-</article>
-
+	<footer class="footer">© Copyright 2016 HELLENIC CAPITAL PARTNERS A.E., HELLENIC CAPITAL PARTNERS A.E.Δ.Α.Κ.Ε.Σ.</footer>
+</main>
 </body>
 </html>
